@@ -20,6 +20,6 @@ context = ssl.create_default_context()
 with open("<INSERT PATH>") as msgfile: #message
     msg.set_content(msgfile.read())
 
-with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+with smtplib.SMTP_SSL("smtp.gmail.com", port) as server:
     server.login(sEmail, pasw)
     server.send_message(msg)
